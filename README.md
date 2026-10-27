@@ -6,7 +6,7 @@
 
 The Thin Place VR adds flat "windows" to any OpenXR game, filled with Virtual Desktop's chroma-key colour (magenta). Virtual Desktop replaces that colour with the Quest 3's passthrough cameras, so your real kit shows through exactly where it sits. The wheel window turns with your Simucube, so it hugs the rim at any steering angle.
 
-**Version 0.14.2** — wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
+**Version 0.14.4** — wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
 
 **Join the community:** [The Thin Place VR Discord](https://discord.gg/XkukAhckz2) for help, bug reports and chat.
 
@@ -43,9 +43,9 @@ Open **The Thin Place VR** from the Start menu or desktop.
 
 - **Home** — whether everything is ready: the VR layer, the runtime, your wheel base and live steering, your windows, and recent games.
 - **Windows** — pick a window and its shape (rectangle, rounded, circle/oval, or traced from a photo), then **Place where I'm looking**, nudge, tilt, turn and roll it while a game is running. You can click these from Virtual Desktop's desktop view without taking the headset off. Add, rename, resize, hide or remove windows here too.
-- **Wheel** — choose the fitted rim, set the steering range and direction, watch the live angle and set the centre. **Add a rim** either traces a rim's outline from a front-on photo, or uses a standard shape: named rims (Fanatec ClubSport Steering Wheel RS, ClubSport Formula V2.5 and V3, Conspit 310 APEX) or a round, D-shape, GT or formula rim of any width. Choose your **wheel base** here too — automatic detection covers Simucube, Fanatec, Moza, Simagic, Logitech, Thrustmaster, Asetek, VRS, Cammus, Conspit and more, or click **Find it** and turn the wheel.
+- **Wheel** — choose the fitted rim, set the steering range and direction, watch the live angle and set the centre. **Add a rim** either traces a rim's outline from a front-on photo, or uses a standard shape: named rims (Fanatec ClubSport Steering Wheel RS, ClubSport Formula V2, V2.5 and V2.5 X (traced, with the gaps cut out), ClubSport Formula V3, Conspit 310 APEX) or a round, D-shape, GT or formula rim of any width. Choose your **wheel base** here too — automatic detection covers Simucube, Fanatec, Moza, Simagic, Logitech, Thrustmaster, Asetek, VRS, Cammus, Conspit and more, or click **Find it** and turn the wheel.
 - **Passthrough** — the key colour, a Virtual Desktop checklist, step sizes, and troubleshooting tools.
-- **Updates** — the panel in the bottom-left corner checks for new versions and installs them.
+- **Updates** — the panel in the bottom-left corner checks for new versions and installs them. Tick **Get beta versions** there to try test versions before everyone else (they may have problems; untick it to go back to full releases at the next one).
 - **Send a report** (bottom of the sidebar) — saves a zip of the logs and settings to your desktop, to send to whoever is helping you.
 
 Changes apply straight away, even mid-drive.
