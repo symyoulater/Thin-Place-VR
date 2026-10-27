@@ -6,7 +6,7 @@
 
 The Thin Place VR adds flat "windows" to any OpenXR game, filled with Virtual Desktop's chroma-key colour (magenta). Virtual Desktop replaces that colour with the Quest 3's passthrough cameras, so your real kit shows through exactly where it sits. The wheel window turns with your Simucube, so it hugs the rim at any steering angle.
 
-**Version 0.14.1** — wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
+**Version 0.14.2** — wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
 
 **Join the community:** [The Thin Place VR Discord](https://discord.gg/XkukAhckz2) for help, bug reports and chat.
 
@@ -79,7 +79,7 @@ Everything saves automatically and stays in place next time. Edit mode also swit
 
 ### Lining up from your hands
 
-The headset re-finds your room each time it starts, and can come back a few millimetres or a degree out, taking every window with it. The Thin Place VR uses the Quest's hand tracking to put things back:
+The headset re-finds your room each time it starts, and can come back a few millimetres or a degree out, taking every window with it. The Thin Place VR can use the Quest's hand tracking to put things back. It's **experimental and off to begin with**: switch on **Line up from my hands** on the Windows page, then start a game.
 
 - Once your wheel window fits the real rim, put the controllers down and hold the wheel straight at **9 and 3** for a second. It learns where your hands sit.
 - From then on, the first time you hold the wheel like that in each session, every window moves back onto your real rim, and the wheel window flashes yellow to show it's done.
