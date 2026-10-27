@@ -37,6 +37,18 @@ jobs:
             New to The Thin Place VR, or wondering if it's safe? Read [Is The Thin Place VR safe to install?](https://github.com/${{ github.repository }}/blob/main/SAFETY.md). It covers the "Windows protected your PC" warning (click **More info**, then **Run anyway**), what the app does and doesn't do, anti-cheat, and how to check the installer yourself.
 
             Questions, help or bugs? Join [The Thin Place VR Discord](https://discord.gg/XkukAhckz2).
+      # Every release's "Source code" download is just these documents, never program code,
+      # and only main is kept as a branch.
+      - name: Point all releases at the documents
+        run: |
+          git fetch -q --tags origin
+          main=${{ steps.main.outputs.sha }}
+          for t in $(git tag -l); do
+            [ "$(git rev-parse "$t^{commit}")" = "$main" ] || git push -q -f origin "$main:refs/tags/$t"
+          done
+          for b in $(git ls-remote --heads origin | sed 's#.*refs/heads/##'); do
+            case "$b" in main|incoming) ;; *) git push -q origin --delete "$b" ;; esac
+          done
       - name: Remove the incoming branch
         if: always()
         run: git push origin --delete incoming
