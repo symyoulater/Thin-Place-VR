@@ -22,7 +22,7 @@ It has two parts:
 **Check the file is the one published here.** Each installer on the [Releases page](https://github.com/symyoulater/Thin-Place-VR/releases) shows its SHA-256 fingerprint next to the download. To check your copy, open PowerShell in your Downloads folder and run:
 
 ```
-Get-FileHash ThinPlaceVR-Setup-0.14.4.exe
+Get-FileHash ThinPlaceVR-Setup-0.14.5.exe
 ```
 
 Use the file name of the installer you downloaded. If the long code matches the one on the Releases page, the file hasn't been changed. The app's own **Check for updates** does this check for you automatically before installing anything.
