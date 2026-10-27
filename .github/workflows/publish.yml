@@ -1,0 +1,42 @@
+name: Publish release
+
+# The installer arrives on a temporary "incoming" branch (pushed by tools/publish-release.sh in the
+# private repo). This turns it into a release pointing at the documents on main, then deletes the branch.
+on:
+  push:
+    branches: [incoming]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read version
+        id: ver
+        run: echo "version=$(tr -d '[:space:]' < VERSION)" >> "$GITHUB_OUTPUT"
+      - name: Main's latest commit
+        id: main
+        run: |
+          git fetch -q origin main
+          echo "sha=$(git rev-parse origin/main)" >> "$GITHUB_OUTPUT"
+      - name: Publish
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.ver.outputs.version }}
+          target_commitish: ${{ steps.main.outputs.sha }}
+          name: The Thin Place VR ${{ steps.ver.outputs.version }}
+          files: ThinPlaceVR-Setup-*.exe
+          prerelease: false
+          make_latest: true
+          body: |
+            Download **ThinPlaceVR-Setup-${{ steps.ver.outputs.version }}.exe** below and run it.
+
+            New to The Thin Place VR, or wondering if it's safe? Read [Is The Thin Place VR safe to install?](https://github.com/${{ github.repository }}/blob/main/SAFETY.md). It covers the "Windows protected your PC" warning (click **More info**, then **Run anyway**), what the app does and doesn't do, anti-cheat, and how to check the installer yourself.
+
+            Questions, help or bugs? Join [The Thin Place VR Discord](https://discord.gg/XkukAhckz2).
+      - name: Remove the incoming branch
+        if: always()
+        run: git push origin --delete incoming
