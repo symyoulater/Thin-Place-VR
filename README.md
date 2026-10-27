@@ -1,0 +1,165 @@
+# The Thin Place VR
+
+**See your real wheel, hands and kit inside VR.**
+
+*A thin place is where the veil between two worlds wears thin. This makes a few of them in your cockpit.*
+
+The Thin Place VR adds flat "windows" to any OpenXR game, filled with Virtual Desktop's chroma-key colour (magenta). Virtual Desktop replaces that colour with the Quest 3's passthrough cameras, so your real kit shows through exactly where it sits. The wheel window turns with your Simucube, so it hugs the rim at any steering angle.
+
+**Version 0.14.1** — wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
+
+**Join the community:** [The Thin Place VR Discord](https://discord.gg/XkukAhckz2) for help, bug reports and chat.
+
+**Wondering if it's safe to install?** Read [Is The Thin Place VR safe to install?](SAFETY.md). It explains the "Windows protected your PC" warning, what the app does and doesn't do, anti-cheat, and how to check the installer yourself.
+
+---
+
+## One-time setup
+
+### 1. Virtual Desktop
+
+On the PC, in the **Virtual Desktop Streamer** app:
+- Set the OpenXR runtime to **VDXR** (not SteamVR).
+
+In the headset, open Virtual Desktop's menu → **Streaming** tab:
+- Set the frame rate to **90 fps or lower** — the passthrough options can't be ticked above that.
+- In the passthrough section, tick **Environment**. Leave **Tracked keyboard**, **Hands** and **Desk portal** off.
+- Press **Configure** next to the tickboxes and set the chroma key colour to **Red 255, Green 0, Blue 255** (magenta).
+- Start with **Similarity 4%**, **Smoothness 10%**, **Opacity 100%**, so only the windows turn into passthrough.
+
+### 2. Install
+
+1. Download `ThinPlaceVR-Setup-x.x.x.exe` from the **Releases** page of this repo.
+   After that, the **The Thin Place VR** app's **Check for updates** button keeps it up to date.
+2. Run it. Windows will warn about an unknown publisher because the installer isn't signed yet: click **More info** → **Run anyway**.
+
+That's it — the next OpenXR game you start will load it.
+
+---
+
+## The app
+
+Open **The Thin Place VR** from the Start menu or desktop.
+
+- **Home** — whether everything is ready: the VR layer, the runtime, your wheel base and live steering, your windows, and recent games.
+- **Windows** — pick a window and its shape (rectangle, rounded, circle/oval, or traced from a photo), then **Place where I'm looking**, nudge, tilt, turn and roll it while a game is running. You can click these from Virtual Desktop's desktop view without taking the headset off. Add, rename, resize, hide or remove windows here too.
+- **Wheel** — choose the fitted rim, set the steering range and direction, watch the live angle and set the centre. **Add a rim** either traces a rim's outline from a front-on photo, or uses a standard shape: named rims (Fanatec ClubSport Steering Wheel RS, ClubSport Formula V2.5 and V3, Conspit 310 APEX) or a round, D-shape, GT or formula rim of any width. Choose your **wheel base** here too — automatic detection covers Simucube, Fanatec, Moza, Simagic, Logitech, Thrustmaster, Asetek, VRS, Cammus, Conspit and more, or click **Find it** and turn the wheel.
+- **Passthrough** — the key colour, a Virtual Desktop checklist, step sizes, and troubleshooting tools.
+- **Updates** — the panel in the bottom-left corner checks for new versions and installs them.
+- **Send a report** (bottom of the sidebar) — saves a zip of the logs and settings to your desktop, to send to whoever is helping you.
+
+Changes apply straight away, even mid-drive.
+
+---
+
+## Games
+
+It works with any game that runs VR through OpenXR. Tested or expected to work:
+
+- **Assetto Corsa EVO**
+- **Le Mans Ultimate**: Easy Anti-Cheat currently blocks the VR add-on (see [SAFETY.md](SAFETY.md#anti-cheat))
+- **Euro Truck Simulator 2** and **American Truck Simulator**: in Steam, right-click the game → **Properties** → **Launch options**, and enter `-openxr -experimental_vr`. Without it they use SteamVR (OpenVR), which doesn't load the add-on. Set the steering range in the app to match the one in the game's controller settings.
+
+---
+
+## First drive
+
+1. Start a game from the list above in VR and get into a car or truck.
+2. After a few seconds a window appears straight ahead of you, outlined in yellow, showing your real surroundings. That confirms it's working.
+3. Press **Ctrl+Alt+H** to switch on **edit mode**. While it's on, the adjustment keys below go to The Thin Place VR instead of the game; every other key works as normal.
+4. Fit the rim you're using (the **Conspit 300GT** is selected to begin with; **W** swaps to the **310 APEX**).
+5. Hold the wheel straight, sit in your driving position, point your nose at the centre of the wheel and press **P**. The wheel window jumps there (aiming slightly below where your head points, since eyes look lower). Set how far away it lands in the app.
+6. Nudge it with the keys below until the real rim fills it.
+7. With the wheel dead straight, press **X** to set the centre.
+8. Turn the wheel. If the window turns the wrong way, press **I**.
+9. Press **Tab** to select the **Stream Deck** window, look at the Stream Deck, press **P**, then nudge and resize it the same way.
+10. Press **Esc** (or **Ctrl+Alt+H** again) to leave edit mode and drive.
+
+Everything saves automatically and stays in place next time. Edit mode also switches itself off after 30 seconds without an adjustment key.
+
+### Lining up from your hands
+
+The headset re-finds your room each time it starts, and can come back a few millimetres or a degree out, taking every window with it. The Thin Place VR uses the Quest's hand tracking to put things back:
+
+- Once your wheel window fits the real rim, put the controllers down and hold the wheel straight at **9 and 3** for a second. It learns where your hands sit.
+- From then on, the first time you hold the wheel like that in each session, every window moves back onto your real rim, and the wheel window flashes yellow to show it's done.
+- If you fine-tune the wheel window by eye later, it learns again automatically.
+- **L** in edit mode lines up again on demand (hold the wheel within 20 seconds); **Shift+L** re-learns. Both are on the Windows page in the app too, along with a switch to turn this off.
+
+It needs hand tracking switched on in the headset (Settings → Movement tracking → Hand and body tracking), which is on by default.
+
+---
+
+## Keys
+
+While driving, only two shortcuts are used — everything else goes to the game:
+
+| Key | Does |
+|---|---|
+| Ctrl+Alt+H | Edit mode on / off |
+| Ctrl+Alt+V | All windows on / off |
+| Ctrl+Alt+K | Setup panel on / off — your windows, the selected one's position, the steering angle and these keys, floating in the headset (also shown in edit mode) |
+
+In **edit mode** (selected window has a yellow outline; the help board appears too):
+
+| Key | Does |
+|---|---|
+| Tab | Select next window (wheel → Stream Deck) |
+| P | Place the selected window where you're looking |
+| W | Swap wheel: Conspit 300GT ↔ Conspit 310 APEX |
+| X | Set steering centre (wheel straight) |
+| I | Flip steering direction |
+| Arrow keys | Move left / right / up / down |
+| R / F | Move away / closer |
+| T / G | Tilt top away / towards you |
+| Q / E | Turn left / right |
+| Z / C | Roll left / right |
+| = / − | Selected window bigger / smaller |
+| O | Selected window on / off |
+| S | Change the selected window's shape (rectangle, rounded, oval, traced) |
+| B | Bring the setup panel back in front of you |
+| [ / ] | Scroll the selected panel (web page or PDF) |
+| M | Turn the selected window to face you |
+| L | Line all windows up from your hands on the wheel (hold it straight at 9 and 3) |
+| Shift+L | Learn where your hands sit (use when the wheel window fits perfectly) |
+| A | Move all windows together so the wheel window is where you're looking — use after the headset has slept or been recentred |
+| Esc | Leave edit mode |
+
+Hold **Shift** as well for fine steps (1 mm or 0.25°).
+
+---
+
+## Settings and logs
+
+Everything lives in **Documents\Thin Place VR**:
+
+- `config.json` — window positions, wheel choice, steering range (default **900°**, must match Simucube Tuner).
+
+The log is in **C:\ProgramData\Thin Place VR\layer.log** — what happened during the last game session. If something isn't working, this is the file to send.
+
+## Uninstall
+
+Windows **Settings → Apps → Installed apps → The Thin Place VR → Uninstall**.
+
+---
+
+## Roadmap
+
+1. **Core windows** — wheel and Stream Deck windows, rotating wheel mask *(done)*
+2. **In-headset editor** — setup panel and per-game positions *(done)*; adjusting with the controllers *(to do)*
+3. **Hands** — hand-shaped cutouts, gestures as buttons
+4. **Sources** — desktop windows, web pages, camera, PDFs as panels *(done: choose "Shows" on the Windows page; the app must stay open)*
+5. **Game data** — AC EVO dashboard and Elite Dangerous status panels *(done: Shows → Game data)*; LMU once the add-on is signed
+6. **Polish** — Stream Deck profile, auto-updates
+
+### Stream Deck (or any macro keypad)
+
+Every edit-mode key also works in one press without edit mode: hold **Ctrl+Alt+Shift** and press it
+(e.g. Ctrl+Alt+Shift+P places the selected window). **Ctrl+Alt+Shift+0** selects the wheel window and
+**Ctrl+Alt+Shift+1..9** select the other windows in order.
+
+---
+
+## Licence
+
+The Thin Place VR is free to download and use during the beta. It is not open source: copying, modifying or redistributing it is not allowed. See [LICENSE](LICENSE).
