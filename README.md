@@ -6,7 +6,7 @@
 
 The Thin Place VR adds flat "windows" to any OpenXR game, filled with Virtual Desktop's chroma-key colour (magenta). Virtual Desktop replaces that colour with the Quest 3's passthrough cameras, so your real kit shows through exactly where it sits. The wheel window turns with your Simucube, so it hugs the rim at any steering angle.
 
-**Version 0.14.5** — wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
+**Version 0.14.6** — wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
 
 **Join the community:** [The Thin Place VR Discord](https://discord.gg/XkukAhckz2) for help, bug reports and chat.
 
