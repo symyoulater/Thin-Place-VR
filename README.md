@@ -6,7 +6,7 @@
 
 The Thin Place VR adds flat "windows" to any OpenXR game, filled with Virtual Desktop's chroma-key colour (magenta). Virtual Desktop replaces that colour with the Quest 3's passthrough cameras, so your real kit shows through exactly where it sits. The wheel window turns with your Simucube, so it hugs the rim at any steering angle.
 
-**Version 0.15.1** — now works in **Le Mans Ultimate online**, through SteamVR overlay mode, and switches to SteamVR for Le Mans Ultimate by itself. Also: wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
+**Version 0.15.2** — **a rim for each car**: it recognises the car you're driving in Le Mans Ultimate, Assetto Corsa EVO and iRacing, and puts on the rim you use for it. Tested in **iRacing**, which works the normal way, no SteamVR needed. Also: **Le Mans Ultimate online** through SteamVR overlay mode, with the switch to SteamVR done by itself; wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
 
 **Join the community:** [The Thin Place VR Discord](https://discord.gg/XkukAhckz2) for help, bug reports and chat.
 
@@ -90,6 +90,10 @@ It needs hand tracking switched on in the headset (Settings → Movement trackin
 
 ---
 
+### A rim for each car
+
+If you swap rims between cars (say, a GT rim for GT3s and a formula rim for hypercars), The Thin Place VR can put the right rim on by itself. Just change rim once while you're in a car (**W** in edit mode, or on the **Wheel** page) and that car remembers it. The **Wheel** page lists every car you've driven, with its rim, so you can change or forget them there too. It works in Le Mans Ultimate, Assetto Corsa EVO and iRacing while the app is open.
+
 ### SteamVR overlay mode (Le Mans Ultimate)
 
 Some games, like Le Mans Ultimate, use anti-cheat that won't let the VR add-on into the game. For those, The Thin Place VR can draw the same windows through **SteamVR** instead. Nothing loads into the game, so the anti-cheat has nothing to object to, and you can race online.
@@ -99,6 +103,7 @@ Some games, like Le Mans Ultimate, use anti-cheat that won't let the VR add-on i
 
 Good to know:
 
+- **iRacing** doesn't need it: it works the normal way through Virtual Desktop (set iRacing's VR to OpenXR). Its switch on the Home card stays off; it's there in case a future iRacing update keeps the add-on out.
 - **Keep the app open** while you play. Overlay mode runs alongside it.
 - **Your windows get their own layout** for each game in overlay mode, so place them once with **Ctrl+Alt+H** and **P** as usual. All the keys work the same.
 - **Lining up from your hands** isn't available in overlay mode yet.
