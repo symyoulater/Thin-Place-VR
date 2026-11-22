@@ -6,7 +6,7 @@
 
 The Thin Place VR adds flat "windows" to any OpenXR game, filled with Virtual Desktop's chroma-key colour (magenta). Virtual Desktop replaces that colour with the Quest 3's passthrough cameras, so your real kit shows through exactly where it sits. The wheel window turns with your Simucube, so it hugs the rim at any steering angle.
 
-**Version 0.15.0** — now works in **Le Mans Ultimate online**, through the new SteamVR overlay mode. Also: wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
+**Version 0.15.1** — now works in **Le Mans Ultimate online**, through SteamVR overlay mode, and switches to SteamVR for Le Mans Ultimate by itself. Also: wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
 
 **Join the community:** [The Thin Place VR Discord](https://discord.gg/XkukAhckz2) for help, bug reports and chat.
 
@@ -95,8 +95,7 @@ It needs hand tracking switched on in the headset (Settings → Movement trackin
 Some games, like Le Mans Ultimate, use anti-cheat that won't let the VR add-on into the game. For those, The Thin Place VR can draw the same windows through **SteamVR** instead. Nothing loads into the game, so the anti-cheat has nothing to object to, and you can race online.
 
 1. In the app, on **Home**, switch on **SteamVR overlay mode**. You can leave it on: it stays out of the way in games where the VR add-on works.
-2. In the **Virtual Desktop Streamer** app, set the **OpenXR runtime** to **SteamVR** while you play Le Mans Ultimate. Set it back to **VDXR** afterwards for your other games.
-3. Start Le Mans Ultimate as usual. SteamVR starts with it, and your windows appear.
+2. Start Le Mans Ultimate as usual. The app switches the OpenXR runtime to **SteamVR** as the game starts (SteamVR starts with it, and your windows appear), and back to Virtual Desktop's **VDXR** when you close it, so your other games are unaffected. If you'd rather do this yourself, turn off **Switch to SteamVR for Le Mans Ultimate** in the same card and change the **OpenXR runtime** in the **Virtual Desktop Streamer** app.
 
 Good to know:
 

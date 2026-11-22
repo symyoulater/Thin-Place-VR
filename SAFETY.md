@@ -23,7 +23,7 @@ It has three parts:
 **Check the file is the one published here.** Each installer on the [Releases page](https://github.com/symyoulater/Thin-Place-VR/releases) shows its SHA-256 fingerprint next to the download. To check your copy, open PowerShell in your Downloads folder and run:
 
 ```
-Get-FileHash ThinPlaceVR-Setup-0.15.0.exe
+Get-FileHash ThinPlaceVR-Setup-0.15.1.exe
 ```
 
 Use the file name of the installer you downloaded. If the long code matches the one on the Releases page, the file hasn't been changed. The app's own **Check for updates** does this check for you automatically before installing anything.
@@ -46,7 +46,7 @@ Use the file name of the installer you downloaded. If the long code matches the 
 
 **Web windows are walled off.** If you put a website in a window, it runs in its own separate browser space. It has no access to the app or your files, and can't use your camera or microphone. The app's own screens are locked down so they can't load anything from the internet.
 
-**Why it asks for administrator permission.** Windows needs administrator permission for two things: installing into Program Files, and telling VR games where to find the VR add-on (one registry entry, the standard OpenXR place for this). That's all it uses admin rights for.
+**Why it asks for administrator permission.** Windows needs administrator permission for three things: installing into Program Files; telling VR games where to find the VR add-on (one registry entry, the standard OpenXR place for this); and setting up two small scheduled tasks, "Use SteamVR" and "Use Virtual Desktop". Those tasks only switch which VR runtime Windows uses, between SteamVR and Virtual Desktop, so SteamVR overlay mode can switch to SteamVR for Le Mans Ultimate and back afterwards without asking you every time. They can't do anything else, and uninstalling removes them. That's all it uses admin rights for.
 
 ---
 
