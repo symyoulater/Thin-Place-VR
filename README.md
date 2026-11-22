@@ -6,7 +6,7 @@
 
 The Thin Place VR adds flat "windows" to any OpenXR game, filled with Virtual Desktop's chroma-key colour (magenta). Virtual Desktop replaces that colour with the Quest 3's passthrough cameras, so your real kit shows through exactly where it sits. The wheel window turns with your Simucube, so it hugs the rim at any steering angle.
 
-**Version 0.14.8** — wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
+**Version 0.15.0** — now works in **Le Mans Ultimate online**, through the new SteamVR overlay mode. Also: wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
 
 **Join the community:** [The Thin Place VR Discord](https://discord.gg/XkukAhckz2) for help, bug reports and chat.
 
@@ -57,7 +57,7 @@ Changes apply straight away, even mid-drive.
 It works with any game that runs VR through OpenXR. Tested or expected to work:
 
 - **Assetto Corsa EVO**
-- **Le Mans Ultimate**: Easy Anti-Cheat currently blocks the VR add-on (see [SAFETY.md](SAFETY.md#anti-cheat))
+- **Le Mans Ultimate**: works online through **SteamVR overlay mode** (see below). Its anti-cheat won't let the VR add-on into the game, so the windows are drawn by SteamVR instead.
 - **Euro Truck Simulator 2** and **American Truck Simulator**: in Steam, right-click the game → **Properties** → **Launch options**, and enter `-openxr -experimental_vr`. Without it they use SteamVR (OpenVR), which doesn't load the add-on. Set the steering range in the app to match the one in the game's controller settings.
 
 ---
@@ -87,6 +87,23 @@ The headset re-finds your room each time it starts, and can come back a few mill
 - **L** in edit mode lines up again on demand (hold the wheel within 20 seconds); **Shift+L** re-learns. Both are on the Windows page in the app too, along with a switch to turn this off.
 
 It needs hand tracking switched on in the headset (Settings → Movement tracking → Hand and body tracking), which is on by default.
+
+---
+
+### SteamVR overlay mode (Le Mans Ultimate)
+
+Some games, like Le Mans Ultimate, use anti-cheat that won't let the VR add-on into the game. For those, The Thin Place VR can draw the same windows through **SteamVR** instead. Nothing loads into the game, so the anti-cheat has nothing to object to, and you can race online.
+
+1. In the app, on **Home**, switch on **SteamVR overlay mode**. You can leave it on: it stays out of the way in games where the VR add-on works.
+2. In the **Virtual Desktop Streamer** app, set the **OpenXR runtime** to **SteamVR** while you play Le Mans Ultimate. Set it back to **VDXR** afterwards for your other games.
+3. Start Le Mans Ultimate as usual. SteamVR starts with it, and your windows appear.
+
+Good to know:
+
+- **Keep the app open** while you play. Overlay mode runs alongside it.
+- **Your windows get their own layout** for each game in overlay mode, so place them once with **Ctrl+Alt+H** and **P** as usual. All the keys work the same.
+- **Lining up from your hands** isn't available in overlay mode yet.
+- **SteamVR uses a little more of your graphics card** than Virtual Desktop's own runtime. For the smoothest result, in **SteamVR Settings → Video** set **Render Resolution** to **Custom, 100%** and turn **Advanced Supersample Filtering** off, and under **General** turn **SteamVR Home** off.
 
 ---
 
@@ -135,7 +152,7 @@ Everything lives in **Documents\Thin Place VR**:
 
 - `config.json` — window positions, wheel choice, steering range (default **900°**, must match Simucube Tuner).
 
-The log is in **C:\ProgramData\Thin Place VR\layer.log** — what happened during the last game session. If something isn't working, this is the file to send.
+The log is in **C:\ProgramData\Thin Place VR\layer.log** — what happened during the last game session. If something isn't working, this is the file to send. In SteamVR overlay mode the log is **overlay.log** in the same folder (and **overlay-previous.log** for the run before).
 
 ## Uninstall
 
@@ -149,7 +166,7 @@ Windows **Settings → Apps → Installed apps → The Thin Place VR → Uninsta
 2. **In-headset editor** — setup panel and per-game positions *(done)*; adjusting with the controllers *(to do)*
 3. **Hands** — hand-shaped cutouts, gestures as buttons
 4. **Sources** — desktop windows, web pages, camera, PDFs as panels *(done: choose "Shows" on the Windows page; the app must stay open)*
-5. **Game data** — AC EVO dashboard and Elite Dangerous status panels *(done: Shows → Game data)*; LMU once the add-on is signed
+5. **Game data** — AC EVO dashboard and Elite Dangerous status panels *(done: Shows → Game data)*; Le Mans Ultimate through SteamVR overlay mode *(done)*
 6. **Polish** — Stream Deck profile, auto-updates
 
 ### Stream Deck (or any macro keypad)
@@ -163,3 +180,5 @@ Every edit-mode key also works in one press without edit mode: hold **Ctrl+Alt+S
 ## Licence
 
 The Thin Place VR is free to download and use during the beta. It is not open source: copying, modifying or redistributing it is not allowed. See [LICENSE](LICENSE).
+
+SteamVR overlay mode uses Valve's OpenVR library (`openvr_api.dll`), which is included under its own BSD licence (`OpenVR-LICENSE.txt` in the install folder).

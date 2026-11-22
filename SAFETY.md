@@ -8,10 +8,11 @@ The short answer is that you don't need to take anyone's word for it. This page 
 
 The Thin Place VR is a tool for VR sim racing, currently in free beta. It draws flat windows inside your VR game, and Virtual Desktop fills them with your Quest 3's passthrough camera view, so you can see your real wheel, hands, keyboard or Stream Deck while you drive.
 
-It has two parts:
+It has three parts:
 
 - **The app** (The Thin Place VR in your Start menu), where you choose and arrange the windows.
 - **A small VR add-on, called an OpenXR layer.** VR games load it to draw the windows. It's the same kind of add-on as the popular OpenXR Toolkit.
+- **SteamVR overlay mode** (optional, off until you switch it on). A separate small program that draws the same windows through SteamVR, for games whose anti-cheat won't let the add-on in. It never loads into the game: it works the same way as other SteamVR overlay tools.
 
 ---
 
@@ -22,7 +23,7 @@ It has two parts:
 **Check the file is the one published here.** Each installer on the [Releases page](https://github.com/symyoulater/Thin-Place-VR/releases) shows its SHA-256 fingerprint next to the download. To check your copy, open PowerShell in your Downloads folder and run:
 
 ```
-Get-FileHash ThinPlaceVR-Setup-0.14.8.exe
+Get-FileHash ThinPlaceVR-Setup-0.15.0.exe
 ```
 
 Use the file name of the installer you downloaded. If the long code matches the one on the Releases page, the file hasn't been changed. The app's own **Check for updates** does this check for you automatically before installing anything.
@@ -33,7 +34,7 @@ Use the file name of the installer you downloaded. If the long code matches the 
 
 ## What it does on your PC
 
-**It doesn't send any of your data anywhere.** There's no tracking, no analytics, no account and no sign-in. The only time it goes online is to check this page for a newer version. Before installing an update, it makes sure the file came from this project's releases and matches the fingerprint published for it.
+**It doesn't send any of your data anywhere.** There's no tracking, no analytics, no account and no sign-in. The only time it goes online is to check this page for a newer version. (Overlay mode talks to SteamVR on your own PC, nothing else.) Before installing an update, it makes sure the file came from this project's releases and matches the fingerprint published for it.
 
 **Its settings and logs stay on your PC.** Window positions are saved in **Documents\Thin Place VR**. The log of the last game session is in **C:\ProgramData\Thin Place VR**. They only leave your PC if you choose to send them to someone.
 
@@ -65,7 +66,7 @@ If you'd like to be extra careful, do the VirusTotal check above first.
 
 Because the VR add-on loads into VR games, some anti-cheat systems don't allow it:
 
-- **Le Mans Ultimate** uses Easy Anti-Cheat, which currently stops The Thin Place VR from loading. The game still runs normally, just without the windows.
+- **Le Mans Ultimate** uses Easy Anti-Cheat, which stops the VR add-on from loading into the game. The game still runs normally, just without the add-on's windows. Use **SteamVR overlay mode** instead (see the README): it draws the windows through SteamVR without loading anything into the game, so it doesn't get around or interfere with the anti-cheat in any way.
 - **Other games with strict anti-cheat**, especially competitive online ones, may react the same way. We have no reports of anyone being banned, but we can't promise how every anti-cheat system will treat it.
 
 If you play online games with strict anti-cheat and want to be completely safe, uninstall The Thin Place VR before playing them. Reinstalling takes about a minute, and your window positions are kept.
