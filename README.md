@@ -1,16 +1,16 @@
-# The Thin Place VR
+# SimPort by Riminal
 
 **See your real wheel, hands and kit inside VR.**
 
-*A thin place is where the veil between two worlds wears thin. This makes a few of them in your cockpit.*
+*Your real cockpit, inside the sim. Part of the Riminal suite, with Rimpulse.*
 
-The Thin Place VR adds flat "windows" to any OpenXR game, filled with Virtual Desktop's chroma-key colour (magenta). Virtual Desktop replaces that colour with the Quest 3's passthrough cameras, so your real kit shows through exactly where it sits. The wheel window turns with your Simucube, so it hugs the rim at any steering angle.
+SimPort adds flat "windows" to any OpenXR game, filled with Virtual Desktop's chroma-key colour (magenta). Virtual Desktop replaces that colour with the Quest 3's passthrough cameras, so your real kit shows through exactly where it sits. The wheel window turns with your Simucube, so it hugs the rim at any steering angle.
 
-**Version 0.15.2** — **a rim for each car**: it recognises the car you're driving in Le Mans Ultimate, Assetto Corsa EVO and iRacing, and puts on the rim you use for it. Tested in **iRacing**, which works the normal way, no SteamVR needed. Also: **Le Mans Ultimate online** through SteamVR overlay mode, with the switch to SteamVR done by itself; wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
+**Version 0.16.0** — **SimPort by Riminal**: the app's new name, with your settings, rims and windows carried over as they were. Since 0.15.2, **a rim for each car**: it recognises the car you're driving in Le Mans Ultimate, Assetto Corsa EVO and iRacing, and puts on the rim you use for it. Tested in **iRacing**, which works the normal way, no SteamVR needed. Also: **Le Mans Ultimate online** through SteamVR overlay mode, with the switch to SteamVR done by itself; wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
 
-**Join the community:** [The Thin Place VR Discord](https://discord.gg/XkukAhckz2) for help, bug reports and chat.
+**Join the community:** [Riminal Discord](https://discord.gg/XkukAhckz2) for help, bug reports and chat.
 
-**Wondering if it's safe to install?** Read [Is The Thin Place VR safe to install?](SAFETY.md). It explains the "Windows protected your PC" warning, what the app does and doesn't do, anti-cheat, and how to check the installer yourself.
+**Wondering if it's safe to install?** Read [Is SimPort safe to install?](SAFETY.md). It explains the "Windows protected your PC" warning, what the app does and doesn't do, anti-cheat, and how to check the installer yourself.
 
 ---
 
@@ -29,8 +29,8 @@ In the headset, open Virtual Desktop's menu → **Streaming** tab:
 
 ### 2. Install
 
-1. Download `ThinPlaceVR-Setup-x.x.x.exe` from the **Releases** page of this repo.
-   After that, the **The Thin Place VR** app's **Check for updates** button keeps it up to date.
+1. Download `SimPort-Setup-x.x.x.exe` from the **Releases** page of this repo.
+   After that, the **SimPort** app's **Check for updates** button keeps it up to date.
 2. Run it. Windows will warn about an unknown publisher because the installer isn't signed yet: click **More info** → **Run anyway**.
 
 That's it — the next OpenXR game you start will load it.
@@ -39,7 +39,7 @@ That's it — the next OpenXR game you start will load it.
 
 ## The app
 
-Open **The Thin Place VR** from the Start menu or desktop.
+Open **SimPort** from the Start menu or desktop.
 
 - **Home** — whether everything is ready: the VR layer, the runtime, your wheel base and live steering, your windows, and recent games.
 - **Windows** — pick a window and its shape (rectangle, rounded, circle/oval, or traced from a photo), then **Place where I'm looking**, nudge, tilt, turn and roll it while a game is running. You can click these from Virtual Desktop's desktop view without taking the headset off. Add, rename, resize, hide or remove windows here too.
@@ -66,7 +66,7 @@ It works with any game that runs VR through OpenXR. Tested or expected to work:
 
 1. Start a game from the list above in VR and get into a car or truck.
 2. After a few seconds a window appears straight ahead of you, outlined in yellow, showing your real surroundings. That confirms it's working.
-3. Press **Ctrl+Alt+H** to switch on **edit mode**. While it's on, the adjustment keys below go to The Thin Place VR instead of the game; every other key works as normal.
+3. Press **Ctrl+Alt+H** to switch on **edit mode**. While it's on, the adjustment keys below go to SimPort instead of the game; every other key works as normal.
 4. Fit the rim you're using (the **Conspit 300GT** is selected to begin with; **W** swaps to the **310 APEX**).
 5. Hold the wheel straight, sit in your driving position, point your nose at the centre of the wheel and press **P**. The wheel window jumps there (aiming slightly below where your head points, since eyes look lower). Set how far away it lands in the app.
 6. Nudge it with the keys below until the real rim fills it.
@@ -79,7 +79,7 @@ Everything saves automatically and stays in place next time. Edit mode also swit
 
 ### Lining up from your hands
 
-The headset re-finds your room each time it starts, and can come back a few millimetres or a degree out, taking every window with it. The Thin Place VR can use the Quest's hand tracking to put things back. It's **experimental and off to begin with**: switch on **Line up from my hands** on the Windows page, then start a game.
+The headset re-finds your room each time it starts, and can come back a few millimetres or a degree out, taking every window with it. SimPort can use the Quest's hand tracking to put things back. It's **experimental and off to begin with**: switch on **Line up from my hands** on the Windows page, then start a game.
 
 - Once your wheel window fits the real rim, put the controllers down and hold the wheel straight at **9 and 3** for a second. It learns where your hands sit.
 - From then on, the first time you hold the wheel like that in each session, every window moves back onto your real rim, and the wheel window flashes yellow to show it's done.
@@ -92,11 +92,11 @@ It needs hand tracking switched on in the headset (Settings → Movement trackin
 
 ### A rim for each car
 
-If you swap rims between cars (say, a GT rim for GT3s and a formula rim for hypercars), The Thin Place VR can put the right rim on by itself. Just change rim once while you're in a car (**W** in edit mode, or on the **Wheel** page) and that car remembers it. The **Wheel** page lists every car you've driven, with its rim, so you can change or forget them there too. It works in Le Mans Ultimate, Assetto Corsa EVO and iRacing while the app is open.
+If you swap rims between cars (say, a GT rim for GT3s and a formula rim for hypercars), SimPort can put the right rim on by itself. Just change rim once while you're in a car (**W** in edit mode, or on the **Wheel** page) and that car remembers it. The **Wheel** page lists every car you've driven, with its rim, so you can change or forget them there too. It works in Le Mans Ultimate, Assetto Corsa EVO and iRacing while the app is open.
 
 ### SteamVR overlay mode (Le Mans Ultimate)
 
-Some games, like Le Mans Ultimate, use anti-cheat that won't let the VR add-on into the game. For those, The Thin Place VR can draw the same windows through **SteamVR** instead. Nothing loads into the game, so the anti-cheat has nothing to object to, and you can race online.
+Some games, like Le Mans Ultimate, use anti-cheat that won't let the VR add-on into the game. For those, SimPort can draw the same windows through **SteamVR** instead. Nothing loads into the game, so the anti-cheat has nothing to object to, and you can race online.
 
 1. In the app, on **Home**, switch on **SteamVR overlay mode**. You can leave it on: it stays out of the way in games where the VR add-on works.
 2. Start Le Mans Ultimate as usual. The app switches the OpenXR runtime to **SteamVR** as the game starts (SteamVR starts with it, and your windows appear), and back to Virtual Desktop's **VDXR** when you close it, so your other games are unaffected. If you'd rather do this yourself, turn off **Switch to SteamVR for Le Mans Ultimate** in the same card and change the **OpenXR runtime** in the **Virtual Desktop Streamer** app.
@@ -152,15 +152,15 @@ Hold **Shift** as well for fine steps (1 mm or 0.25°).
 
 ## Settings and logs
 
-Everything lives in **Documents\Thin Place VR**:
+Everything lives in **Documents\SimPort**:
 
 - `config.json` — window positions, wheel choice, steering range (default **900°**, must match Simucube Tuner).
 
-The log is in **C:\ProgramData\Thin Place VR\layer.log** — what happened during the last game session. If something isn't working, this is the file to send. In SteamVR overlay mode the log is **overlay.log** in the same folder (and **overlay-previous.log** for the run before).
+The log is in **C:\ProgramData\SimPort\layer.log** — what happened during the last game session. If something isn't working, this is the file to send. In SteamVR overlay mode the log is **overlay.log** in the same folder (and **overlay-previous.log** for the run before).
 
 ## Uninstall
 
-Windows **Settings → Apps → Installed apps → The Thin Place VR → Uninstall**.
+Windows **Settings → Apps → Installed apps → SimPort → Uninstall**.
 
 ---
 
@@ -183,6 +183,6 @@ Every edit-mode key also works in one press without edit mode: hold **Ctrl+Alt+S
 
 ## Licence
 
-The Thin Place VR is free to download and use during the beta. It is not open source: copying, modifying or redistributing it is not allowed. See [LICENSE](LICENSE).
+SimPort is free to download and use during the beta. It is not open source: copying, modifying or redistributing it is not allowed. See [LICENSE](LICENSE).
 
 SteamVR overlay mode uses Valve's OpenVR library (`openvr_api.dll`), which is included under its own BSD licence (`OpenVR-LICENSE.txt` in the install folder).
