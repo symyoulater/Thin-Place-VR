@@ -43,7 +43,7 @@ jobs:
           body: |
             ${{ steps.ver.outputs.beta == 'true' && '**This is a beta for testers.** It may have problems. To get betas automatically, tick **Get beta versions** under the version number in the app. Please report how it goes in the test-reports forum on Discord.' || '' }}
 
-            Download **SimPort-Setup-${{ steps.ver.outputs.version }}.exe** below and run it. SimPort is in free beta: each test version works for 14 days from its release, and **Check for updates** in the app brings the next one.
+            Download **SimPort-Setup-${{ steps.ver.outputs.version }}.exe** below and run it. SimPort is in free beta: each test version works for 90 days from its release, and **Check for updates** in the app brings the next one.
 
             New to SimPort, or wondering if it's safe? Read [Is SimPort safe to install?](https://github.com/${{ github.repository }}/blob/main/SAFETY.md). It covers the "Windows protected your PC" warning (click **More info**, then **Run anyway**), what the app does and doesn't do, anti-cheat, and how to check the installer yourself.
 
