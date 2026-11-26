@@ -6,7 +6,7 @@
 
 SimPort adds flat "windows" to any OpenXR game, filled with Virtual Desktop's chroma-key colour (magenta). Virtual Desktop replaces that colour with the Quest 3's passthrough cameras, so your real kit shows through exactly where it sits. The wheel window turns with your Simucube, so it hugs the rim at any steering angle.
 
-**Version 0.16.0** — **SimPort by Riminal**: the app's new name, with your settings, rims and windows carried over as they were. Since 0.15.2, **a rim for each car**: it recognises the car you're driving in Le Mans Ultimate, Assetto Corsa EVO and iRacing, and puts on the rim you use for it. Tested in **iRacing**, which works the normal way, no SteamVR needed. Also: **Le Mans Ultimate online** through SteamVR overlay mode, with the switch to SteamVR done by itself; wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
+**Version 0.16.1** — each test version now works for 14 days from its release, and SimPort tells you when an update is due. 0.16.0: **SimPort by Riminal**, the app's new name. Since 0.15.2, **a rim for each car**: it recognises the car you're driving in Le Mans Ultimate, Assetto Corsa EVO and iRacing, and puts on the rim you use for it. Tested in **iRacing**, which works the normal way, no SteamVR needed. Also: **Le Mans Ultimate online** through SteamVR overlay mode, with the switch to SteamVR done by itself; wheel window (Conspit 300GT and 310 APEX), Stream Deck window, hotkey placement, and windows that line themselves up from your hands on the wheel.
 
 **Join the community:** [Riminal Discord](https://discord.gg/XkukAhckz2) for help, bug reports and chat.
 
@@ -183,6 +183,6 @@ Every edit-mode key also works in one press without edit mode: hold **Ctrl+Alt+S
 
 ## Licence
 
-SimPort is free to download and use during the beta. It is not open source: copying, modifying or redistributing it is not allowed. See [LICENSE](LICENSE).
+SimPort is free to download and use during the beta. Each test version works for 14 days from its release: SimPort tells you a few days before, and **Check for updates** brings the next one. It is not open source: copying, modifying or redistributing it is not allowed. See [LICENSE](LICENSE).
 
 SteamVR overlay mode uses Valve's OpenVR library (`openvr_api.dll`), which is included under its own BSD licence (`OpenVR-LICENSE.txt` in the install folder).
